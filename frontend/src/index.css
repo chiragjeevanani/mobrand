@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+@theme {
+  --color-mobrand-primary: #0A192F;
+  --color-mobrand-teal: #6C3CE1;
+  --color-mobrand-accent: #FF6B35;
+  --color-mobrand-bg: #F8FAFC;
+  --color-mobrand-dark: #020617;
+  
+  --font-heading: "Outfit", sans-serif;
+  --font-body: "Inter", sans-serif;
+}
+
+@layer base {
+  html.lenis, html.lenis body {
+    height: auto;
+  }
+  
+  .lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+  }
+  
+  .lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+  }
+  
+  .lenis.lenis-stopped {
+    overflow: hidden;
+  }
+  
+  .lenis.lenis-scrolling iframe {
+    pointer-events: none;
+  }
+  
+  body {
+    @apply bg-mobrand-bg text-mobrand-dark font-body antialiased;
+  }
+  
+  .dark body {
+    @apply bg-mobrand-dark text-mobrand-bg;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading tracking-tight;
+  }
+}
