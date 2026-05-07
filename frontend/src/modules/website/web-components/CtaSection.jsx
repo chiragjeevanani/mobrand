@@ -4,7 +4,7 @@ import { ArrowRight, Sparkles } from 'lucide-react';
 
 const CtaSection = () => {
   return (
-    <section className="py-24 relative overflow-hidden bg-white">
+    <section id="cta" className="py-24 relative overflow-hidden bg-white">
       {/* Background with abstract graphic */}
       <div className="absolute inset-0 pointer-events-none">
          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-5xl h-[500px] bg-gradient-to-tr from-mobrand-teal/20 via-mobrand-primary/5 to-mobrand-accent/20 rounded-[100%] blur-[100px] opacity-70" />
@@ -32,22 +32,22 @@ const CtaSection = () => {
              </motion.div>
 
              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold font-heading text-white leading-tight mb-6 tracking-tight">
-               Everything You Need, <br className="hidden md:block"/>
-               <span className="text-transparent bg-clip-text bg-gradient-to-r from-mobrand-accent to-orange-400">Delivered Fast.</span>
+               Everything You Need to <br className="hidden md:block"/>
+               <span className="text-transparent bg-clip-text bg-gradient-to-r from-mobrand-accent to-orange-400">Grow Your Business.</span>
              </h2>
 
              <p className="text-lg text-slate-300 max-w-2xl mx-auto mb-10 leading-relaxed font-body">
-               Join 2 million+ users already loving India's smartest super-app. 
-               Download Mobrand now and experience the future of commerce.
+               Join hundreds of growing businesses already thriving on India's smart vendor platform. 
+               Get started on Mobrand today and scale your digital storefront.
              </p>
 
              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                <button className="w-full sm:w-auto px-8 py-4 bg-mobrand-accent hover:bg-orange-600 text-mobrand-primary rounded-full font-bold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-[0_0_30px_rgba(255,107,53,0.4)] flex items-center justify-center gap-2 group">
-                 Download App
+                 Start Free Trial
                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                </button>
                <button className="w-full sm:w-auto px-8 py-4 bg-white/10 hover:bg-white/20 text-white rounded-full font-medium text-lg transition-all duration-300 backdrop-blur-md border border-white/10 hover:border-white/30 hidden sm:block">
-                 For Businesses
+                 Register Business
                </button>
              </div>
           </div>

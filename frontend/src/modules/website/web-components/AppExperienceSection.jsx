@@ -1,24 +1,24 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Search, Sparkles, RefreshCcw, LayoutGrid, CheckCircle } from 'lucide-react';
+import { Bell, Sparkles, Receipt, Database, CheckCircle } from 'lucide-react';
 
-import appUiImg from '../../../assets/images/app_ui_smart.png';
+import appUiImg from '../../../assets/images/app_ui_b2b.png';
 
 const features = [
   {
-    icon: <Search className="w-5 h-5 text-mobrand-teal" />,
-    title: 'Unified Smart Search',
-    description: 'Find a specific burger, a pair of sneakers, or fresh milk in one single search bar.'
+    icon: <Bell className="w-5 h-5 text-mobrand-teal" />,
+    title: 'Instant Order Alerts',
+    description: 'Never miss an order. Get real-time push notifications on web and mobile devices instantly.'
   },
   {
     icon: <Sparkles className="w-5 h-5 text-orange-500" />,
-    title: 'AI Recommendations',
-    description: 'Our engine learns your habits to suggest products and meals you actually want.'
+    title: 'AI Stock Predictions',
+    description: 'Our engine tracks sales velocity to alert you before your top items run out of stock.'
   },
   {
-    icon: <RefreshCcw className="w-5 h-5 text-indigo-500" />,
-    title: 'One-Tap Reorder',
-    description: 'Your frequent orders are always ready. Reorder in seconds from your home screen.'
+    icon: <Receipt className="w-5 h-5 text-indigo-500" />,
+    title: 'Auto-Invoicing & Receipts',
+    description: 'Generate, send, and manage digital PDF bills and receipts to your customers instantly.'
   }
 ];
 
@@ -41,7 +41,7 @@ const AppExperienceSection = () => {
                 viewport={{ once: true }}
                 className="text-mobrand-teal font-black uppercase tracking-[0.25em] text-[10px] mb-4"
               >
-                Intelligence Inside
+                Complete Operational Control
               </motion.p>
               <motion.h2
                 initial={{ opacity: 0, y: 10 }}
@@ -50,8 +50,8 @@ const AppExperienceSection = () => {
                 transition={{ delay: 0.1 }}
                 className="text-4xl font-black font-heading text-mobrand-primary leading-[1.1] tracking-tighter mb-6"
               >
-                Smart Features for <br />
-                <span className="text-slate-400">Smart Living.</span>
+                Smart Solutions for <br />
+                <span className="text-slate-400">Smart Businesses.</span>
               </motion.h2>
             </div>
 
@@ -110,8 +110,8 @@ const AppExperienceSection = () => {
                     <CheckCircle className="w-4 h-4" />
                   </div>
                   <div>
-                    <p className="text-[10px] font-black uppercase text-slate-400">Order Status</p>
-                    <p className="text-xs font-bold text-mobrand-primary">Out for Delivery</p>
+                    <p className="text-[10px] font-black uppercase text-slate-400">Payout status</p>
+                    <p className="text-xs font-bold text-mobrand-primary">Settled instantly</p>
                   </div>
                 </div>
               </motion.div>
@@ -129,13 +129,12 @@ const AppExperienceSection = () => {
             >
               <div className="absolute top-0 right-0 w-32 h-32 bg-mobrand-accent/20 rounded-full blur-[40px]" />
               
-              <LayoutGrid className="w-10 h-10 text-mobrand-accent mb-6" />
+              <Database className="w-10 h-10 text-mobrand-accent mb-6" />
               <h4 className="text-2xl font-black font-heading tracking-tight mb-4">
-                Unified Smart Wallet
+                Unified Catalog Manager
               </h4>
               <p className="text-white/70 text-sm leading-relaxed mb-6">
-                One wallet for everything. Pay across all verticals, earn unified cashback, 
-                and manage your spending in one place.
+                One database for everything. Control your products across food delivery, retail listings, or service menus from a single visual panel.
               </p>
               <div className="flex items-center gap-2 text-mobrand-accent">
                 <span className="text-[10px] font-black uppercase tracking-widest underline decoration-2 underline-offset-4">Learn More</span>
@@ -150,10 +149,10 @@ const AppExperienceSection = () => {
               className="p-10 bg-white border border-slate-100 rounded-[2.5rem] shadow-sm"
             >
                <h4 className="text-xl font-black font-heading text-mobrand-primary tracking-tight mb-4">
-                 Safe & Fast Checkout
+                 Safe & Instant Payouts
                </h4>
                <p className="text-slate-500 text-sm leading-relaxed">
-                 Experience the fastest checkout in the industry with 1-tap UPI integration and biometric security.
+                 Experience the fastest settlements. Receive customer payments securely and transfer earnings directly to your bank account with a single tap.
                </p>
             </motion.div>
           </div>

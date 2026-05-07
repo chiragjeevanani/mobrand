@@ -5,26 +5,26 @@ import { ShieldCheck, Lock, Headphones, Zap, CheckCircle2, Award } from 'lucide-
 const trustFactors = [
   {
     icon: <Lock className="w-8 h-8 text-mobrand-teal" />,
-    title: '100% Secure Payments',
-    description: 'Military-grade encryption for all your transactions. Pay via UPI, Cards, or Wallet with total peace of mind.',
+    title: 'Secure & Reliable',
+    description: 'Your business data is protected with industry-grade security and state-of-the-art authentication.',
     color: 'bg-teal-50'
   },
   {
     icon: <Award className="w-8 h-8 text-indigo-600" />,
-    title: 'Verified Partners Only',
-    description: 'Every restaurant and retailer on our platform undergoes a strict quality and hygiene audit.',
+    title: 'Fast & Stable Platform',
+    description: 'Our 99.9% platform uptime ensures your storefront is always live, responsive, and ready for business.',
     color: 'bg-indigo-50'
   },
   {
     icon: <Headphones className="w-8 h-8 text-orange-600" />,
-    title: '24/7 Priority Support',
-    description: 'Have a question? Our dedicated support team is available around the clock to help you out.',
+    title: 'Dedicated Business Support',
+    description: 'Our merchant care experts are available around the clock to assist you with any questions or operations.',
     color: 'bg-orange-50'
   },
   {
     icon: <Zap className="w-8 h-8 text-emerald-600" />,
-    title: 'Lightning Fast Resolution',
-    description: 'Issues with your order? Get instant resolutions and refunds within minutes via our AI assistant.',
+    title: 'Instant Settlements',
+    description: 'Get your sales revenue settled directly to your bank account instantly with no delay or high fees.',
     color: 'bg-emerald-50'
   }
 ];
@@ -40,7 +40,7 @@ const TrustSection = () => {
             viewport={{ once: true }}
             className="text-mobrand-teal font-black uppercase tracking-[0.25em] text-[10px] mb-4"
           >
-            Why India Trusts Us
+            TRUSTED BY BUSINESSES ACROSS INDIA
           </motion.p>
           
           <motion.h2
@@ -50,8 +50,8 @@ const TrustSection = () => {
             transition={{ delay: 0.1 }}
             className="text-4xl md:text-5xl font-black font-heading text-mobrand-primary leading-[1.1] tracking-tighter mb-6"
           >
-            Safe. Secure. <br />
-            <span className="text-slate-400">And Always Dependable.</span>
+            Why Businesses <br />
+            <span className="text-slate-400">Trust Mobrand</span>
           </motion.h2>
 
           <motion.p
@@ -61,8 +61,7 @@ const TrustSection = () => {
             transition={{ delay: 0.2 }}
             className="text-lg text-slate-500 font-body leading-relaxed"
           >
-            Join millions of users who rely on Mobrand every day for their essential needs. 
-            We prioritize your safety and satisfaction above all else.
+            Join hundreds of growing businesses who trust Mobrand to power their digital operations and deliver smooth customer service every day.
           </motion.p>
         </div>
 

@@ -35,8 +35,8 @@ const MapSection = () => {
             viewport={{ once: true }}
             className="text-4xl md:text-5xl font-bold font-heading text-mobrand-primary leading-tight mb-6"
           >
-            Delivering Across <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-mobrand-teal to-blue-500">India's Biggest Cities</span>
+            Powering Businesses <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-mobrand-teal to-blue-500">Across Indian Cities</span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -45,8 +45,7 @@ const MapSection = () => {
             transition={{ delay: 0.1 }}
             className="text-lg text-slate-600 leading-relaxed mb-12"
           >
-            From Mumbai to Chennai, Hyderabad to Kolkata — Mobrand is live and growing fast. 
-            We're bringing the super-app experience to every corner of the country.
+            From Mumbai to Chennai, Bengaluru to Delhi — Mobrand is helping storefronts digitize, manage stock, and grow their businesses easily with a modern, high-speed ecosystem.
           </motion.p>
 
             <motion.div
@@ -57,12 +56,12 @@ const MapSection = () => {
               className="grid grid-cols-2 gap-12"
             >
               <div className="border-l-4 border-mobrand-teal pl-6">
-                <div className="text-4xl font-black font-heading text-mobrand-primary mb-1 tracking-tight">30+</div>
-                <div className="text-[10px] font-black text-slate-400 uppercase tracking-widest">Cities Live</div>
+                <div className="text-4xl font-black font-heading text-mobrand-primary mb-1 tracking-tight">100+</div>
+                <div className="text-[10px] font-black text-slate-400 uppercase tracking-widest">Businesses Onboarded</div>
               </div>
               <div className="border-l-4 border-slate-100 pl-6">
                 <div className="text-4xl font-black font-heading text-mobrand-primary mb-1 tracking-tight">5,000+</div>
-                <div className="text-[10px] font-black text-slate-400 uppercase tracking-widest">Delivery Hubs</div>
+                <div className="text-[10px] font-black text-slate-400 uppercase tracking-widest">Daily Orders Processed</div>
               </div>
             </motion.div>
           </div>

@@ -19,8 +19,8 @@ const Navbar = () => {
   const navLinks = [
     { name: 'Features', href: '#features' },
     { name: 'How It Works', href: '#how-it-works' },
-    { name: 'App Verticals', href: '#app-showcase' },
-    { name: 'Download', href: '#download' },
+    { name: 'Business Verticals', href: '#app-showcase' },
+    { name: 'Why Us', href: '#trust' },
   ];
 
   return (
@@ -60,10 +60,10 @@ const Navbar = () => {
         {/* Desktop Actions */}
         <div className="hidden md:flex items-center gap-4">
           <button className="text-sm font-medium text-slate-700 hover:text-mobrand-primary transition-colors">
-            For Businesses
+            Partner Login
           </button>
           <button className="bg-mobrand-primary hover:bg-mobrand-teal text-white px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 hover:shadow-lg hover:shadow-mobrand-teal/20 active:scale-95">
-            Download App
+            Start Free Trial
           </button>
         </div>
 
@@ -98,10 +98,10 @@ const Navbar = () => {
             <div className="h-px bg-slate-100 my-2" />
             <div className="flex flex-col gap-3">
               <button className="w-full text-center py-3 text-slate-700 font-medium border border-slate-200 rounded-xl">
-                For Businesses
+                Partner Login
               </button>
               <button className="w-full text-center py-3 bg-mobrand-primary text-white font-medium rounded-xl">
-                Download App
+                Start Free Trial
               </button>
             </div>
           </motion.div>

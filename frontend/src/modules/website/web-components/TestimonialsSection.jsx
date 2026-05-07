@@ -5,27 +5,30 @@ import { ChevronLeft, ChevronRight, Quote, Star } from 'lucide-react';
 const testimonials = [
   {
     id: 1,
-    name: "Priya Sharma",
-    role: "Regular Customer",
-    image: "https://i.pravatar.cc/150?u=priya",
-    text: "I can't believe I used to have 5 different apps for my daily needs. Mobrand has everything — I ordered groceries in 8 minutes yesterday and then picked out a new dress for a party in the same cart!",
-    rating: 5
+    name: "Rajesh Kumar",
+    role: "Owner, Kumar Grocers",
+    image: "https://i.pravatar.cc/150?u=rajesh",
+    text: "Since setting up our online storefront on Mobrand, our monthly sales have increased by 45%. The unified dashboard lets us track inventory and dispatch orders completely effortlessly.",
+    rating: 5,
+    city: "New Delhi"
   },
   {
     id: 2,
-    name: "Rahul Mehra",
-    role: "Mobrand Pro Member",
-    image: "https://i.pravatar.cc/150?u=rahul",
-    text: "The cashback on the Pro membership is insane. I've saved over ₹3,000 this month alone across my food orders and electronics shopping. It pays for itself in just two days.",
-    rating: 5
+    name: "Sneha Patel",
+    role: "Founder, Chic Boutique",
+    image: "https://i.pravatar.cc/150?u=sneha",
+    text: "We launched our boutique on Mobrand's Shops vertical. Getting customer payments settled instantly and managing our deliveries has made scaling our business completely hassle-free.",
+    rating: 5,
+    city: "Mumbai"
   },
   {
     id: 3,
     name: "Anita Kapoor",
     role: "Owner, Spice Garden",
     image: "https://i.pravatar.cc/150?u=anita",
-    text: "Listing our restaurant on MobFood doubled our online orders in the first week. The unified dashboard makes managing our menu and tracking deliveries so much easier than other platforms.",
-    rating: 5
+    text: "Listing our restaurant on Mobrand doubled our online orders in the first week. The unified dashboard makes managing our menu and tracking deliveries so much easier than other platforms.",
+    rating: 5,
+    city: "Bengaluru"
   }
 ];
 
@@ -77,7 +80,7 @@ const TestimonialsSection = () => {
                viewport={{ once: true }}
                className="text-mobrand-accent font-medium uppercase tracking-wider mb-4"
              >
-               Rider Stories
+               Success Stories
              </motion.div>
              <motion.h2
                initial={{ opacity: 0, y: 20 }}

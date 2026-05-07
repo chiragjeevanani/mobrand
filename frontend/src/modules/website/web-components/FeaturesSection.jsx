@@ -1,37 +1,37 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Wallet, Zap, Bike, MapPin, Network } from 'lucide-react';
+import { ShoppingBag, Package, Users, BarChart3, Layers, Headphones } from 'lucide-react';
 
 const features = [
   {
-    icon: <Wallet className="w-6 h-6" />,
-    title: 'One App, Everything',
-    description: 'Browse e-commerce, food & groceries from a single unified cart and home screen.',
+    icon: <ShoppingBag className="w-6 h-6" />,
+    title: 'Order Management',
+    description: 'Manage all incoming orders in real-time. Accept, process, and track fulfillment seamlessly.',
   },
   {
-    icon: <Zap className="w-6 h-6" />,
-    title: '10-Minute Quick Commerce',
-    description: 'Our dark store network ensures instant delivery of your daily essentials.',
+    icon: <Package className="w-6 h-6" />,
+    title: 'Product & Inventory',
+    description: 'Add, update, and organize your catalog. Keep track of stock levels to ensure you never miss a sale.',
   },
   {
-    icon: <Bike className="w-6 h-6" />,
-    title: '30-Minute Food Delivery',
-    description: '5,000+ restaurant partners with real-time tracking from kitchen to doorstep.',
+    icon: <Users className="w-6 h-6" />,
+    title: 'Customer Management',
+    description: 'Access customer profiles, order histories, and preferences to build long-term relationships.',
   },
   {
-    icon: <Wallet className="w-6 h-6" />,
-    title: 'Unified Smart Wallet',
-    description: 'Pay across all verticals effortlessly and earn massive cashback on every order.',
+    icon: <BarChart3 className="w-6 h-6" />,
+    title: 'Sales & Analytics',
+    description: 'Monitor daily, weekly, and monthly performance with detailed graphs and reports on your growth.',
   },
   {
-    icon: <MapPin className="w-6 h-6" />,
-    title: 'Live Order Tracking',
-    description: 'Precision GPS tracking so you know exactly where your delivery is at all times.',
+    icon: <Layers className="w-6 h-6" />,
+    title: 'Multi-Business Support',
+    description: 'Perfect for any business type — retail stores, restaurants, service bookings, and more.',
   },
   {
-    icon: <Network className="w-6 h-6" />,
-    title: 'Daily Deals & Offers',
-    description: 'Personalized discounts across shopping, food, and essentials tailored for you.',
+    icon: <Headphones className="w-6 h-6" />,
+    title: 'Dedicated 24/7 Support',
+    description: 'Our professional merchant care team is ready to support you at every stage of your business journey.',
   },
 ];
 
@@ -57,8 +57,8 @@ const FeaturesSection = () => {
             transition={{ delay: 0.1 }}
             className="text-4xl md:text-5xl font-bold font-heading text-mobrand-primary leading-[1.15] mb-6 tracking-tight"
           >
-            The ecosystem built for <br />
-            <span className="text-slate-400">convenience & speed</span>
+            Powerful features for <br />
+            <span className="text-slate-400">your business growth</span>
           </motion.h2>
 
           <motion.p
@@ -68,7 +68,7 @@ const FeaturesSection = () => {
             transition={{ delay: 0.2 }}
             className="text-lg text-slate-500 font-body leading-relaxed max-w-2xl"
           >
-            Mobrand is more than an app — it's a unified platform designed to save you time and money on every transaction.
+            Mobrand is a comprehensive business-to-business platform designed to help you digitize, manage, and scale your storefront with absolute confidence.
           </motion.p>
         </div>
 

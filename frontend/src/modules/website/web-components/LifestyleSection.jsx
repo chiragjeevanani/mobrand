@@ -1,26 +1,26 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ShoppingBag, Utensils, Zap, ArrowRight } from 'lucide-react';
+import { Store, Utensils, Calendar, ArrowRight } from 'lucide-react';
 
-import shopImg from '../../../assets/images/mobshop_lifestyle.png';
-import foodImg from '../../../assets/images/mobfood_lifestyle.png';
-import nowImg from '../../../assets/images/mobnow_lifestyle.png';
+import shopImg from '../../../assets/images/shops_retail_b2b.png';
+import foodImg from '../../../assets/images/food_beverages_b2b.png';
+import nowImg from '../../../assets/images/services_more_b2b.png';
 
 const sections = [
   {
-    title: 'MobShop',
-    subtitle: 'Everything you desire, delivered same-day.',
-    description: 'Browse millions of products across fashion, electronics, and home decor. With Mobrand, luxury and convenience are just a tap away.',
+    title: 'Shops & Retail',
+    subtitle: '✓ Grow Your Retail Business',
+    description: 'Add your products, manage stock levels, receive instant online orders, and build long-term trust with your customers — all from one simple interface.',
     image: shopImg,
-    icon: <ShoppingBag className="w-6 h-6" />,
+    icon: <Store className="w-6 h-6" />,
     color: 'text-indigo-600',
     bg: 'bg-indigo-50',
     reverse: false
   },
   {
-    title: 'MobFood',
-    subtitle: 'Gourmet delights at your doorstep.',
-    description: 'From local hidden gems to global culinary giants, order your favorite meals and track them live until they arrive hot and fresh.',
+    title: 'Food & Beverages',
+    subtitle: '✓ Serve More. Grow More.',
+    description: 'Fulfill customer cravings. Take online orders, design digital menus, manage dispatch/deliveries, and watch your restaurant operations grow with zero friction.',
     image: foodImg,
     icon: <Utensils className="w-6 h-6" />,
     color: 'text-orange-600',
@@ -28,11 +28,11 @@ const sections = [
     reverse: true
   },
   {
-    title: 'MobNow',
-    subtitle: 'Essentials in the blink of an eye.',
-    description: 'Ran out of milk? Need medicine fast? MobNow delivers daily essentials, groceries, and more in under 10 minutes.',
+    title: 'Services & More',
+    subtitle: '✓ Simplify. Manage. Scale.',
+    description: 'Take charge of your appointments and bookings. Set up your working hours, assign services, and manage your daily calendar in a centralized smart platform.',
     image: nowImg,
-    icon: <Zap className="w-6 h-6" />,
+    icon: <Calendar className="w-6 h-6" />,
     color: 'text-emerald-600',
     bg: 'bg-emerald-50',
     reverse: false
@@ -41,7 +41,7 @@ const sections = [
 
 const LifestyleSection = () => {
   return (
-    <section className="py-24 lg:py-32 bg-white overflow-hidden">
+    <section id="lifestyle" className="py-24 lg:py-32 bg-white overflow-hidden">
       <div className="container mx-auto px-6 max-w-7xl">
         <div className="text-center mb-24">
           <motion.p
@@ -50,7 +50,7 @@ const LifestyleSection = () => {
             viewport={{ once: true }}
             className="text-mobrand-teal font-black uppercase tracking-[0.25em] text-[10px] mb-4"
           >
-            The Mobrand Experience
+            All-In-One Business Platform
           </motion.p>
           <motion.h2
             initial={{ opacity: 0, y: 10 }}
@@ -59,8 +59,8 @@ const LifestyleSection = () => {
             transition={{ delay: 0.1 }}
             className="text-4xl md:text-6xl font-black font-heading text-mobrand-primary leading-[1.1] tracking-tighter"
           >
-            Everything you love, <br />
-            <span className="text-slate-400">all in one place.</span>
+            One Platform. Multiple Businesses. <br />
+            <span className="text-slate-400">Unlimited Growth.</span>
           </motion.h2>
         </div>
 
@@ -92,7 +92,7 @@ const LifestyleSection = () => {
                   </p>
                   
                   <button className="flex items-center gap-3 text-mobrand-primary font-black uppercase tracking-widest text-xs group">
-                    Start Exploring 
+                    Get Started Now 
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                     <div className="h-px flex-1 bg-slate-100 min-w-[60px]" />
                   </button>
@@ -120,7 +120,7 @@ const LifestyleSection = () => {
                     
                     {/* Glass overlay on hover */}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-8">
-                       <p className="text-white font-bold text-sm tracking-wide">Premium Quality. Guaranteed Delivery.</p>
+                       <p className="text-white font-bold text-sm tracking-wide">Unified Dashboard. Professional Control.</p>
                     </div>
                   </div>
                 </motion.div>

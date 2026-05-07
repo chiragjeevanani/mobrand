@@ -1,35 +1,35 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ShoppingBag, Utensils, Zap, ChevronRight } from 'lucide-react';
-import showcaseImage from '../../../assets/images/app_showcase_dark.png';
+import { Store, Utensils, Calendar, ChevronRight } from 'lucide-react';
+import showcaseImage from '../../../assets/images/app_showcase_b2b.png';
 
 const verticals = [
   {
-    id: 'mobshop',
-    name: 'MobShop',
-    icon: <ShoppingBag className="w-6 h-6" />,
-    tagline: 'The world at your fingertips.',
-    description: 'From fashion to electronics, shop millions of products with same-day delivery.',
+    id: 'shops',
+    name: 'Shops & Retail',
+    icon: <Store className="w-6 h-6" />,
+    tagline: 'Your products, globally visible.',
+    description: 'Easily set up catalogs, manage inventory, process fast orders, and offer physical deliveries with a single, smart storefront.',
     accent: 'from-blue-500 to-indigo-600',
-    stats: ['1M+ Products', 'Zero Setup Fees']
+    stats: ['Unlimited Inventory', 'Zero Complex Setup']
   },
   {
-    id: 'mobfood',
-    name: 'MobFood',
+    id: 'food',
+    name: 'Food & Beverages',
     icon: <Utensils className="w-6 h-6" />,
-    tagline: 'Cravings satisfied, fast.',
-    description: 'Discover the best local eats and global chains, delivered hot to your door.',
+    tagline: 'Manage orders, increase revenue.',
+    description: 'Take instant orders, control menus, set prices, offer dynamic discounts, and schedule seamless kitchen-to-door deliveries.',
     accent: 'from-orange-500 to-red-600',
-    stats: ['5K+ Restaurants', '30 min Avg.']
+    stats: ['Real-time Dispatch', 'Menu Control Panel']
   },
   {
-    id: 'mobnow',
-    name: 'MobNow',
-    icon: <Zap className="w-6 h-6" />,
-    tagline: 'Essentials in a heartbeat.',
-    description: 'Groceries, medicines, and daily needs delivered in under 10 minutes.',
+    id: 'services',
+    name: 'Services & Booking',
+    icon: <Calendar className="w-6 h-6" />,
+    tagline: 'Perfect booking scheduler.',
+    description: 'Configure available time-slots, let customers book your specialized services, and monitor your entire calendar at a glance.',
     accent: 'from-emerald-500 to-teal-600',
-    stats: ['10 min Delivery', '24/7 Service']
+    stats: ['Calendar Sync', 'Automatic Alerts']
   }
 ];
 
@@ -47,7 +47,7 @@ const AppShowcaseSection = () => {
             viewport={{ once: true }}
             className="text-mobrand-accent font-medium uppercase tracking-[0.2em] text-xs mb-4"
           >
-            One Platform, Three Worlds
+            The Merchant Advantage
           </motion.div>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -56,8 +56,8 @@ const AppShowcaseSection = () => {
             transition={{ delay: 0.1 }}
             className="text-4xl md:text-6xl font-black font-heading leading-[1.1] tracking-tighter"
           >
-            Designed for the <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-mobrand-teal to-blue-400">Modern Lifestyle</span>
+            Control & Scale From <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-mobrand-teal to-blue-400">Your Unified Dashboard</span>
           </motion.h2>
         </div>
 
@@ -120,7 +120,7 @@ const AppShowcaseSection = () => {
               
               <img 
                 src={showcaseImage} 
-                alt="Mobrand App Interface" 
+                alt="Mobrand Business Software Interface" 
                 className="w-full h-auto object-contain drop-shadow-[0_40px_100px_rgba(0,0,0,0.6)]" 
               />
               
@@ -130,7 +130,7 @@ const AppShowcaseSection = () => {
                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
                 className="absolute top-[10%] -right-4 lg:-right-8 bg-mobrand-accent text-mobrand-primary text-[10px] font-black uppercase tracking-widest px-5 py-3 rounded-2xl shadow-2xl rotate-6 z-30"
               >
-                100% Unified App
+                100% Unified System
               </motion.div>
             </motion.div>
           </div>

@@ -20,8 +20,8 @@ const FooterSection = () => {
               </span>
             </a>
             <p className="text-slate-600 leading-relaxed mb-8 max-w-sm">
-              India's smartest super-app. Shop anything, order from your favorite restaurants, 
-              and get essentials delivered in 10 minutes — all in one place.
+              India's leading business and vendor platform. Start, manage, and scale your online storefront, 
+              receive instant orders, and grow your brand — all in one powerful platform.
             </p>
             <div className="flex gap-4">
                {[
@@ -45,10 +45,15 @@ const FooterSection = () => {
           <div className="col-span-1">
             <h4 className="text-mobrand-primary font-bold mb-6">Services</h4>
             <ul className="space-y-4">
-              {['MobShop', 'MobFood', 'MobNow', 'Offers'].map((link) => (
-                <li key={link}>
-                  <a href="#" className="text-slate-500 hover:text-mobrand-teal transition-colors text-sm font-medium">
-                    {link}
+              {[
+                { name: 'Shops & Retail', href: '#lifestyle' },
+                { name: 'Food & Beverages', href: '#lifestyle' },
+                { name: 'Services & Booking', href: '#lifestyle' },
+                { name: 'Business Analytics', href: '#features' }
+              ].map((link) => (
+                <li key={link.name}>
+                  <a href={link.href} className="text-slate-500 hover:text-mobrand-teal transition-colors text-sm font-medium">
+                    {link.name}
                   </a>
                 </li>
               ))}
@@ -59,10 +64,15 @@ const FooterSection = () => {
           <div className="col-span-1">
             <h4 className="text-mobrand-primary font-bold mb-6">Partners</h4>
             <ul className="space-y-4">
-              {['For Restaurants', 'For Retailers', 'For Dark Stores', 'For Brands'].map((link) => (
-                <li key={link}>
-                  <a href="#" className="text-slate-500 hover:text-mobrand-teal transition-colors text-sm font-medium">
-                    {link}
+              {[
+                { name: 'For Vendors', href: '#how-it-works' },
+                { name: 'For Franchisees', href: '#how-it-works' },
+                { name: 'Partner App', href: '#app-showcase' },
+                { name: 'Pricing Plans', href: '#cta' }
+              ].map((link) => (
+                <li key={link.name}>
+                  <a href={link.href} className="text-slate-500 hover:text-mobrand-teal transition-colors text-sm font-medium">
+                    {link.name}
                   </a>
                 </li>
               ))}

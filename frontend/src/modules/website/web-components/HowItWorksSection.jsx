@@ -1,24 +1,24 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { UserCheck, CreditCard, Bike } from 'lucide-react';
+import { UserPlus, Store, TrendingUp } from 'lucide-react';
 
 const steps = [
   {
-    icon: <UserCheck className="w-8 h-8 text-mobrand-teal" />,
-    title: 'Download & Sign Up',
-    description: 'Get the Mobrand app on iOS or Android. Create your account in 60 seconds.',
-    color: 'bg-indigo-50',
+    icon: <UserPlus className="w-8 h-8 text-mobrand-teal" />,
+    title: 'Register Your Business',
+    description: 'Sign up on Mobrand and submit your business details in just a few minutes.',
+    color: 'bg-teal-50',
   },
   {
-    icon: <CreditCard className="w-8 h-8 text-blue-500" />,
-    title: 'Browse All 3 Verticals',
-    description: 'Shop thousands of stores, explore restaurants, or order essentials from one screen.',
+    icon: <Store className="w-8 h-8 text-blue-500" />,
+    title: 'Set Up Your Store',
+    description: 'Add your products, services, pricing, and business info easily from your dashboard.',
     color: 'bg-blue-50',
   },
   {
-    icon: <Bike className="w-8 h-8 text-mobrand-accent" />,
-    title: 'Fast Delivery',
-    description: 'Track your order live. Everything delivered fast — from groceries to shopping.',
+    icon: <TrendingUp className="w-8 h-8 text-mobrand-accent" />,
+    title: 'Grow & Get Paid',
+    description: 'Receive payouts directly to your account with our secure systems as your business scales.',
     color: 'bg-orange-50',
   },
 ];
