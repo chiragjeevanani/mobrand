@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Zap } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { cn } from '../../../lib/utils';
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,12 +24,16 @@ const Navbar = () => {
     { name: 'Why Us', href: '#trust' },
   ];
 
+  const getLinkUrl = (hash) => {
+    return location.pathname === '/' ? hash : `/${hash}`;
+  };
+
   return (
     <nav
       className={cn(
         'fixed top-0 w-full z-50 transition-all duration-300 pointer-events-auto',
-        scrolled
-          ? 'bg-mobrand-bg/80 backdrop-blur-md shadow-sm py-4'
+        scrolled || location.pathname !== '/'
+          ? 'bg-mobrand-bg/90 backdrop-blur-md shadow-sm py-4'
           : 'bg-transparent py-6'
       )}
     >
@@ -49,27 +54,46 @@ const Navbar = () => {
           {navLinks.map((link) => (
             <a
               key={link.name}
-              href={link.href}
+              href={getLinkUrl(link.href)}
               className="text-sm font-medium text-slate-600 hover:text-mobrand-teal transition-colors"
             >
               {link.name}
             </a>
           ))}
+          {/* Add quick links to subpages */}
+          <Link 
+            to="/about" 
+            className={`text-sm font-medium transition-colors ${location.pathname === '/about' ? 'text-mobrand-teal font-semibold' : 'text-slate-600 hover:text-mobrand-teal'}`}
+          >
+            About
+          </Link>
+          <Link 
+            to="/contact-us" 
+            className={`text-sm font-medium transition-colors ${location.pathname === '/contact-us' ? 'text-mobrand-teal font-semibold' : 'text-slate-600 hover:text-mobrand-teal'}`}
+          >
+            Contact
+          </Link>
         </div>
 
         {/* Desktop Actions */}
         <div className="hidden md:flex items-center gap-4">
-          <button className="text-sm font-medium text-slate-700 hover:text-mobrand-primary transition-colors">
+          <Link 
+            to="/coming-soon"
+            className="text-sm font-medium text-slate-700 hover:text-mobrand-primary transition-colors cursor-pointer"
+          >
             Partner Login
-          </button>
-          <button className="bg-mobrand-primary hover:bg-mobrand-teal text-white px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 hover:shadow-lg hover:shadow-mobrand-teal/20 active:scale-95">
+          </Link>
+          <Link 
+            to="/contact-us"
+            className="bg-mobrand-primary hover:bg-mobrand-teal text-white px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 hover:shadow-lg hover:shadow-mobrand-teal/20 active:scale-95 cursor-pointer"
+          >
             Start Free Trial
-          </button>
+          </Link>
         </div>
 
         {/* Mobile menu toggle */}
         <button
-          className="md:hidden text-mobrand-primary"
+          className="md:hidden text-mobrand-primary cursor-pointer"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         >
           {mobileMenuOpen ? <X /> : <Menu />}
@@ -88,21 +112,44 @@ const Navbar = () => {
             {navLinks.map((link) => (
               <a
                 key={link.name}
-                href={link.href}
-                className="text-lg font-medium text-slate-700"
+                href={getLinkUrl(link.href)}
+                className="text-lg font-medium text-slate-700 hover:text-mobrand-teal transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 {link.name}
               </a>
             ))}
+            <Link 
+              to="/about"
+              className="text-lg font-medium text-slate-700 hover:text-mobrand-teal transition-colors"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              About Us
+            </Link>
+            <Link 
+              to="/contact-us"
+              className="text-lg font-medium text-slate-700 hover:text-mobrand-teal transition-colors"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Contact Us
+            </Link>
+            
             <div className="h-px bg-slate-100 my-2" />
             <div className="flex flex-col gap-3">
-              <button className="w-full text-center py-3 text-slate-700 font-medium border border-slate-200 rounded-xl">
+              <Link 
+                to="/coming-soon"
+                className="w-full text-center py-3 text-slate-700 font-medium border border-slate-200 rounded-xl hover:bg-slate-50 transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
                 Partner Login
-              </button>
-              <button className="w-full text-center py-3 bg-mobrand-primary text-white font-medium rounded-xl">
+              </Link>
+              <Link 
+                to="/contact-us"
+                className="w-full text-center py-3 bg-mobrand-primary text-white font-medium rounded-xl shadow-md hover:bg-mobrand-teal transition-all"
+                onClick={() => setMobileMenuOpen(false)}
+              >
                 Start Free Trial
-              </button>
+              </Link>
             </div>
           </motion.div>
         )}
