@@ -14,7 +14,16 @@ import VendorCustomerPolicies from './modules/website/web-pages/VendorCustomerPo
 import WhiteLabelSaaS from './modules/website/web-pages/WhiteLabelSaaS';
 import LegalSecurity from './modules/website/web-pages/LegalSecurity';
 import BrandSeoInfo from './modules/website/web-pages/BrandSeoInfo';
-import ComingSoon from './modules/website/web-pages/ComingSoon';
+
+// NEW CLIENT PAGES
+import UserVendorAppPolicies from './modules/website/web-pages/UserVendorAppPolicies';
+import DeleteAccountRequest from './modules/website/web-pages/DeleteAccountRequest';
+import CookiePolicy from './modules/website/web-pages/CookiePolicy';
+import Disclaimer from './modules/website/web-pages/Disclaimer';
+import FAQ from './modules/website/web-pages/FAQ';
+import SupportCenter from './modules/website/web-pages/SupportCenter';
+import Blog from './modules/website/web-pages/Blog';
+import PaymentSettlementPolicy from './modules/website/web-pages/PaymentSettlementPolicy';
 
 function App() {
   return (
@@ -38,10 +47,19 @@ function App() {
         <Route path="/whitelabel-saas-terms" element={<WhiteLabelSaaS />} />
         <Route path="/legal-security-protection" element={<LegalSecurity />} />
         <Route path="/brand-seo-info" element={<BrandSeoInfo />} />
-        <Route path="/coming-soon" element={<ComingSoon />} />
+
+        {/* NEW CLIENT ROUTES */}
+        <Route path="/app-policies" element={<UserVendorAppPolicies />} />
+        <Route path="/delete-account" element={<DeleteAccountRequest />} />
+        <Route path="/cookie-policy" element={<CookiePolicy />} />
+        <Route path="/disclaimer" element={<Disclaimer />} />
+        <Route path="/faq" element={<FAQ />} />
+        <Route path="/support" element={<SupportCenter />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/payment-settlement" element={<PaymentSettlementPolicy />} />
 
         {/* Fallback route for all other undefined routes */}
-        <Route path="*" element={<ComingSoon />} />
+        <Route path="*" element={<WebHome />} />
       </Routes>
     </BrowserRouter>
   );

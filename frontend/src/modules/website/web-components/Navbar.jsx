@@ -78,7 +78,7 @@ const Navbar = () => {
         {/* Desktop Actions */}
         <div className="hidden md:flex items-center gap-4">
           <Link 
-            to="/coming-soon"
+            to="/contact-us"
             className="text-sm font-medium text-slate-700 hover:text-mobrand-primary transition-colors cursor-pointer"
           >
             Partner Login
@@ -137,7 +137,7 @@ const Navbar = () => {
             <div className="h-px bg-slate-100 my-2" />
             <div className="flex flex-col gap-3">
               <Link 
-                to="/coming-soon"
+                to="/contact-us"
                 className="w-full text-center py-3 text-slate-700 font-medium border border-slate-200 rounded-xl hover:bg-slate-50 transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
