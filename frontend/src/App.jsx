@@ -24,6 +24,7 @@ import FAQ from './modules/website/web-pages/FAQ';
 import SupportCenter from './modules/website/web-pages/SupportCenter';
 import Blog from './modules/website/web-pages/Blog';
 import PaymentSettlementPolicy from './modules/website/web-pages/PaymentSettlementPolicy';
+import PricingPlans from './modules/website/web-pages/PricingPlans';
 
 function App() {
   return (
@@ -57,6 +58,7 @@ function App() {
         <Route path="/support" element={<SupportCenter />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/payment-settlement" element={<PaymentSettlementPolicy />} />
+        <Route path="/pricing-plans" element={<PricingPlans />} />
 
         {/* Fallback route for all other undefined routes */}
         <Route path="*" element={<WebHome />} />

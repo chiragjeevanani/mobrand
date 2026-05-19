@@ -62,6 +62,12 @@ const Navbar = () => {
           ))}
           {/* Add quick links to subpages */}
           <Link 
+            to="/pricing-plans" 
+            className={`text-sm font-medium transition-colors ${location.pathname === '/pricing-plans' ? 'text-mobrand-teal font-semibold' : 'text-slate-600 hover:text-mobrand-teal'}`}
+          >
+            Plans
+          </Link>
+          <Link 
             to="/about" 
             className={`text-sm font-medium transition-colors ${location.pathname === '/about' ? 'text-mobrand-teal font-semibold' : 'text-slate-600 hover:text-mobrand-teal'}`}
           >
@@ -119,6 +125,13 @@ const Navbar = () => {
                 {link.name}
               </a>
             ))}
+            <Link 
+              to="/pricing-plans"
+              className="text-lg font-medium text-slate-700 hover:text-mobrand-teal transition-colors"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Plans
+            </Link>
             <Link 
               to="/about"
               className="text-lg font-medium text-slate-700 hover:text-mobrand-teal transition-colors"
