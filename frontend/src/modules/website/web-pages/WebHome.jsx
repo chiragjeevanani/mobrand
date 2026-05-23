@@ -12,6 +12,7 @@ import LifestyleSection from '../web-components/LifestyleSection';
 import AppShowcaseSection from '../web-components/AppShowcaseSection';
 import AppExperienceSection from '../web-components/AppExperienceSection';
 import MapSection from '../web-components/MapSection';
+import DeliveryPromoSection from '../web-components/DeliveryPromoSection';
 import TestimonialsSection from '../web-components/TestimonialsSection';
 import CtaSection from '../web-components/CtaSection';
 import FooterSection from '../web-components/FooterSection';
@@ -32,6 +33,7 @@ const WebHome = () => {
           <AppShowcaseSection />
           <AppExperienceSection />
           <MapSection />
+          <DeliveryPromoSection />
           <TestimonialsSection />
           <CtaSection />
         </main>

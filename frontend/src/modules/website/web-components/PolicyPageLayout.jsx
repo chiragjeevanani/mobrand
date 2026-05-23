@@ -10,6 +10,7 @@ const PolicyPageLayout = ({
   subtitle,
   effectiveDate,
   sections = [],
+  // eslint-disable-next-line no-unused-vars
   seoKeywords = [],
   ctaTitle = "Start Your Journey with Mobrand",
   ctaButtons = true,
@@ -232,25 +233,7 @@ const PolicyPageLayout = ({
                 ))}
               </div>
 
-              {/* SEO Tags Showcase Section */}
-              {seoKeywords.length > 0 && (
-                <div className="bg-slate-100/50 rounded-2xl border border-slate-200/60 p-6 md:p-8">
-                  <div className="flex items-center gap-2 mb-4 text-slate-500 font-semibold text-sm">
-                    <Tag className="w-4 h-4 text-mobrand-teal" />
-                    <span>Search Indexing & SEO Focus</span>
-                  </div>
-                  <div className="flex flex-wrap gap-2">
-                    {seoKeywords.map((keyword, i) => (
-                      <span 
-                        key={i}
-                        className="bg-white border border-slate-200/80 hover:border-mobrand-teal text-slate-600 hover:text-mobrand-teal text-xs font-medium px-3 py-1.5 rounded-full transition-all cursor-default"
-                      >
-                        {keyword}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              )}
+
 
               {/* Trial/Registration CTA */}
               {ctaButtons && (

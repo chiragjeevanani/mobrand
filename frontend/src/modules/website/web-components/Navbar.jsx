@@ -37,7 +37,7 @@ const Navbar = () => {
           : 'bg-transparent py-6'
       )}
     >
-      <div className="container mx-auto px-6 md:px-12 flex justify-between items-center">
+      <div className="w-full max-w-none px-6 md:px-12 lg:px-20 flex justify-between items-center">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2 group">
           <div className="w-8 h-8 rounded-lg bg-mobrand-primary flex items-center justify-center relative overflow-hidden">
@@ -62,6 +62,12 @@ const Navbar = () => {
           ))}
           {/* Add quick links to subpages */}
           <Link 
+            to="/delivery-partners" 
+            className={`text-sm font-medium transition-colors ${location.pathname === '/delivery-partners' ? 'text-mobrand-teal font-semibold' : 'text-slate-600 hover:text-mobrand-teal'}`}
+          >
+            Delivery Partners
+          </Link>
+          <Link 
             to="/pricing-plans" 
             className={`text-sm font-medium transition-colors ${location.pathname === '/pricing-plans' ? 'text-mobrand-teal font-semibold' : 'text-slate-600 hover:text-mobrand-teal'}`}
           >
@@ -84,7 +90,7 @@ const Navbar = () => {
         {/* Desktop Actions */}
         <div className="hidden md:flex items-center gap-4">
           <Link 
-            to="/contact-us"
+            to="/partner-login"
             className="text-sm font-medium text-slate-700 hover:text-mobrand-primary transition-colors cursor-pointer"
           >
             Partner Login
@@ -126,6 +132,13 @@ const Navbar = () => {
               </a>
             ))}
             <Link 
+              to="/delivery-partners"
+              className="text-lg font-medium text-slate-700 hover:text-mobrand-teal transition-colors"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Delivery Partners
+            </Link>
+            <Link 
               to="/pricing-plans"
               className="text-lg font-medium text-slate-700 hover:text-mobrand-teal transition-colors"
               onClick={() => setMobileMenuOpen(false)}
@@ -150,7 +163,7 @@ const Navbar = () => {
             <div className="h-px bg-slate-100 my-2" />
             <div className="flex flex-col gap-3">
               <Link 
-                to="/contact-us"
+                to="/partner-login"
                 className="w-full text-center py-3 text-slate-700 font-medium border border-slate-200 rounded-xl hover:bg-slate-50 transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
