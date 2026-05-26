@@ -93,7 +93,7 @@ const FooterSection = () => {
                 { name: 'Account Deletion', to: '/delete-account' },
                 { name: 'Vendor Settlement', to: '/payment-settlement' },
                 { name: 'Vendor Agreement', to: '/vendor-agreement' },
-                { name: 'Delivery Partners', to: '/delivery-partners' },
+                { name: 'Mopak Delivery', to: '/delivery-partners' },
                 { name: 'Shipping Policy', to: '/delivery-policy' },
                 { name: 'Vendor Policies', to: '/vendor-customer-policies' },
                 { name: 'SaaS Terms', to: '/whitelabel-saas-terms' }

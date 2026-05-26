@@ -64,7 +64,7 @@ const Navbar = () => {
             to="/delivery-partners" 
             className={`text-sm font-medium transition-colors ${location.pathname === '/delivery-partners' ? 'text-mobrand-teal font-semibold' : 'text-slate-600 hover:text-mobrand-teal'}`}
           >
-            Delivery Partners
+            Mopak Delivery
           </Link>
           <Link 
             to="/pricing-plans" 
@@ -135,7 +135,7 @@ const Navbar = () => {
               className="text-lg font-medium text-slate-700 hover:text-mobrand-teal transition-colors"
               onClick={() => setMobileMenuOpen(false)}
             >
-              Delivery Partners
+              Mopak Delivery
             </Link>
             <Link 
               to="/pricing-plans"
