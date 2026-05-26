@@ -284,20 +284,6 @@ const ContactUs = () => {
 
           </div>
 
-          {/* SEO tags area */}
-          <div className="mt-16 bg-slate-100 rounded-2xl p-6 border border-slate-200/60">
-            <div className="flex items-center gap-2 mb-4 text-slate-500 font-semibold text-sm">
-              <HelpCircle className="w-4 h-4 text-mobrand-teal" />
-              <span>Search Engine Optimization Matrix</span>
-            </div>
-            <div className="flex flex-wrap gap-2">
-              {seoKeywords.map((tag, i) => (
-                <span key={i} className="bg-white border border-slate-200 text-slate-600 px-3 py-1.5 rounded-full text-xs font-semibold cursor-default hover:text-mobrand-teal hover:border-mobrand-teal transition-colors">
-                  {tag}
-                </span>
-              ))}
-            </div>
-          </div>
         </div>
       </section>
 

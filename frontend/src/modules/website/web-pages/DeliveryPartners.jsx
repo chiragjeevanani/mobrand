@@ -20,7 +20,7 @@ import {
 } from 'lucide-react';
 import Navbar from '../web-components/Navbar';
 import FooterSection from '../web-components/FooterSection';
-import riderPersona from '../../../assets/images/indian_rider_bike.png';
+import riderPersona from '../../../assets/images/delivery_page_image.png';
 
 const DeliveryPartners = () => {
   // Timeline steps state
@@ -231,7 +231,7 @@ const DeliveryPartners = () => {
                     <img 
                       src={riderPersona} 
                       alt="Mobrand Logistics Partner" 
-                      className="w-full h-[280px] object-cover border border-slate-200 mb-6"
+                      className="w-full h-[320px] object-cover object-top border border-slate-200 mb-6"
                     />
                     
                     <div className="flex justify-between items-start gap-4">
