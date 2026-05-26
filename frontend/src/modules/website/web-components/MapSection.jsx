@@ -1,15 +1,44 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Landmark } from 'lucide-react';
 import indiaMap from '../../../assets/images/india_map_bg.png';
 
 const activeCities = [
-  { name: 'Bengaluru', top: '74%', left: '36%' },
-  { name: 'New Delhi', top: '30%', left: '33%' },
-  { name: 'Mumbai', top: '60%', left: '22%' },
-  { name: 'Hyderabad', top: '58%', left: '42%' },
-  { name: 'Pune', top: '65%', left: '26%' },
-  { name: 'Chennai', top: '82%', left: '35%' },
-  { name: 'Ahmedabad', top: '45%', left: '25%' },
+  { 
+    name: 'New Delhi', 
+    region: 'NORTH INDIA', 
+    top: '28%', left: '35%', 
+    cardClasses: 'bottom-[calc(100%+1.5rem)] left-[calc(100%+1.5rem)]',
+    lineClasses: 'w-8 sm:w-16 -rotate-45 origin-left top-1/2 left-0' 
+  },
+  { 
+    name: 'Mumbai', 
+    region: 'WEST INDIA', 
+    top: '55%', left: '22%', 
+    cardClasses: 'top-1/2 -translate-y-1/2 right-[calc(100%+1.5rem)]',
+    lineClasses: 'w-8 sm:w-16 rotate-180 origin-left top-1/2 left-0' 
+  },
+  { 
+    name: 'Kolkata', 
+    region: 'EAST INDIA', 
+    top: '50%', left: '60%', 
+    cardClasses: 'top-[calc(100%+1.5rem)] left-[calc(100%+1.5rem)]',
+    lineClasses: 'w-8 sm:w-16 rotate-45 origin-left top-1/2 left-0' 
+  },
+  { 
+    name: 'Bengaluru', 
+    region: 'SOUTH INDIA', 
+    top: '75%', left: '33%', 
+    cardClasses: 'top-1/2 -translate-y-1/2 right-[calc(100%+1.5rem)]',
+    lineClasses: 'w-8 sm:w-16 rotate-180 origin-left top-1/2 left-0' 
+  },
+  { 
+    name: 'Chennai', 
+    region: 'SOUTH INDIA', 
+    top: '80%', left: '38%', 
+    cardClasses: 'top-1/2 -translate-y-1/2 left-[calc(100%+1.5rem)]',
+    lineClasses: 'w-6 sm:w-12 rotate-0 origin-left top-1/2 left-0' 
+  }
 ];
 
 const MapSection = () => {
@@ -86,38 +115,62 @@ const MapSection = () => {
                 {activeCities.map((city, index) => (
                   <motion.div
                     key={index}
-                    initial={{ opacity: 0, scale: 0 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    viewport={{ once: true }}
-                    transition={{
-                      duration: 0.6,
-                      delay: 0.4 + (index * 0.1),
-                      type: "spring",
-                      stiffness: 100
-                    }}
-                    className="absolute flex items-center justify-center group cursor-pointer pointer-events-auto"
+                    className="absolute pointer-events-auto flex items-center justify-center"
                     style={{ top: city.top, left: city.left }}
                   >
-                    <div className="relative">
-                      <div className="absolute inset-[-12px] rounded-full bg-mobrand-teal/20 blur-md opacity-0 group-hover:opacity-100 transition-opacity" />
-                      <div className="absolute inset-0 rounded-full bg-mobrand-teal animate-ping opacity-30" />
-                      <div className="relative w-3.5 h-3.5 bg-mobrand-teal border-2 border-white rounded-full z-10 shadow-lg group-hover:scale-150 group-hover:bg-mobrand-primary transition-all duration-500" />
-                    </div>
+                    {/* Dashed Line */}
+                    <motion.div 
+                      initial={{ scaleX: 0, opacity: 0 }}
+                      whileInView={{ scaleX: 1, opacity: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.6, delay: 0.4 + (index * 0.2) }}
+                      className={`absolute border-t-2 border-dashed border-mobrand-teal/40 z-0 ${city.lineClasses}`} 
+                    />
 
-                    {/* Tooltip */}
-                    <div className="absolute bottom-full mb-3 opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-2 group-hover:translate-y-0 whitespace-nowrap bg-mobrand-primary text-white text-[10px] font-black uppercase tracking-widest px-4 py-2 rounded-xl shadow-2xl pointer-events-none z-20">
-                      {city.name}
-                      <div className="absolute top-full left-1/2 -translate-x-1/2 border-[6px] border-transparent border-t-mobrand-primary" />
-                    </div>
+                    {/* The Dot */}
+                    <motion.div 
+                      initial={{ scale: 0, opacity: 0 }}
+                      whileInView={{ scale: 1, opacity: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.4, delay: 0.2 + (index * 0.2) }}
+                      className="relative z-10"
+                    >
+                      <div className="absolute inset-[-8px] rounded-full bg-mobrand-teal/10 blur-sm" />
+                      <div className="absolute inset-0 rounded-full bg-mobrand-teal animate-ping opacity-30" />
+                      <div className="relative w-4 h-4 bg-mobrand-primary border-2 border-white rounded-full shadow-[0_0_10px_rgba(0,0,0,0.2)]" />
+                    </motion.div>
+
+                    {/* The Card */}
+                    <motion.div 
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: 0.7 + (index * 0.2), type: "spring", stiffness: 100 }}
+                      className={`absolute bg-white px-3 py-2 sm:px-4 sm:py-2.5 rounded-xl shadow-[0_8px_30px_rgba(0,0,0,0.08)] border border-slate-100 flex items-center gap-2 sm:gap-3 whitespace-nowrap z-20 ${city.cardClasses}`}
+                    >
+                      <div className="bg-mobrand-teal/10 p-1 sm:p-1.5 rounded-lg">
+                         <Landmark className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-mobrand-primary" />
+                      </div>
+                      <div>
+                        <div className="text-xs sm:text-sm font-bold text-slate-800 leading-none mb-0.5 sm:mb-1">{city.name}</div>
+                        <div className="text-[8px] sm:text-[9px] font-black text-slate-400 uppercase tracking-widest leading-none">{city.region}</div>
+                      </div>
+                    </motion.div>
                   </motion.div>
                 ))}
               </div>
             </div>
 
-            <div className="absolute bottom-10 right-10 flex items-center gap-3 bg-white border border-slate-100 px-5 py-2.5 rounded-2xl shadow-xl shadow-slate-200/20 z-20">
-              <span className="w-2.5 h-2.5 rounded-full bg-mobrand-teal animate-pulse" />
-              <span className="text-[10px] font-black text-slate-600 uppercase tracking-widest px-1">Active Expansion</span>
-            </div>
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 1.5 }}
+              className="absolute bottom-6 right-6 sm:bottom-10 sm:right-10 flex items-center gap-2 sm:gap-3 bg-white border border-slate-100 px-4 py-2 sm:px-5 sm:py-3 rounded-full shadow-xl shadow-slate-200/20 z-20"
+            >
+              <span className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-mobrand-teal animate-pulse" />
+              <span className="text-[9px] sm:text-[10px] font-black text-slate-600 uppercase tracking-widest px-1">Active Expansion</span>
+            </motion.div>
           </div>
 
         </div>

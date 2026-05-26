@@ -2,7 +2,7 @@ import React from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { ChevronRight, ArrowRight, ShieldCheck, CheckCircle2, BadgePercent, Clock } from 'lucide-react';
 
-import heroImage from '../../../assets/images/b2b_dashboard_hero.png';
+import heroImage from '../../../assets/images/hero_image.png';
 
 const HeroSection = () => {
   const { scrollY } = useScroll();

@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Zap } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import { cn } from '../../../lib/utils';
+import mobrandLogo from '../../../assets/images/Mobrand_logo.png';
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -39,14 +40,12 @@ const Navbar = () => {
     >
       <div className="w-full max-w-none px-6 md:px-12 lg:px-20 flex justify-between items-center">
         {/* Logo */}
-        <Link to="/" className="flex items-center gap-2 group">
-          <div className="w-8 h-8 rounded-lg bg-mobrand-primary flex items-center justify-center relative overflow-hidden">
-            <div className="absolute inset-0 bg-mobrand-accent opacity-0 group-hover:opacity-20 transition-opacity" />
-            <Zap className="text-mobrand-accent w-5 h-5" />
-          </div>
-          <span className="text-2xl font-heading font-bold tracking-tight text-mobrand-primary">
-            Mobrand
-          </span>
+        <Link to="/" className="flex items-center group">
+          <img 
+            src={mobrandLogo} 
+            alt="Mobrand Logo" 
+            className="h-[100px] md:h-[180px] -my-[30px] md:-my-[70px] -ml-6 md:-ml-12 w-auto object-contain transition-transform duration-300 group-hover:scale-[1.02]"
+          />
         </Link>
 
         {/* Desktop Links */}
