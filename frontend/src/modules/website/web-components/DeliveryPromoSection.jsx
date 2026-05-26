@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Truck, ShieldCheck, Package, Bike, BarChart, Store, MapPin, CreditCard, Headphones, CalendarDays } from 'lucide-react';
-import riderImage from '../../../assets/images/indian_rider_bike.png';
+import riderImage from '../../../assets/images/delivery_image.png';
 
 const DeliveryPromoSection = () => {
   const bulletPoints = [
