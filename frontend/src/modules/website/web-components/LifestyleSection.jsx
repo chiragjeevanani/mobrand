@@ -2,9 +2,9 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Store, Utensils, Calendar, ArrowRight } from 'lucide-react';
 
-import shopImg from '../../../assets/images/shops_retail_b2b.png';
-import foodImg from '../../../assets/images/food_beverages_b2b.png';
-import nowImg from '../../../assets/images/services_more_b2b.png';
+import shopImg from '../../../assets/images/retail_image.jpeg';
+import foodImg from '../../../assets/images/food_image.jpeg';
+import nowImg from '../../../assets/images/services_image.jpeg';
 
 const sections = [
   {
